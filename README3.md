@@ -61,10 +61,16 @@ Tenancy: Default
 
 На этом этапе была добавлена запись маршрутизации для выхода в интернет. В таблицу маршрутов, связанную с моей VPC(student-vpc-k05), был добавлен маршрут с направлением 0.0.0.0/0, указывающий на Intertnet Gateway(student-igw-k05). Это обеспечивает доступ ресурсов внутри VPC к сети Интернет.
 
+# Шаг 6. Создание NAT Gateway
+<img width="1227" height="245" alt="image" src="https://github.com/user-attachments/assets/e282482c-f930-4ae2-b301-ea99d20757ab" />
 
+<img width="1641" height="579" alt="image" src="https://github.com/user-attachments/assets/4e552775-a273-419b-a42e-1cad199eb733" />
 
+<img width="1499" height="494" alt="image" src="https://github.com/user-attachments/assets/0ba2dd0a-3f22-45ff-a1f4-381abe725bb4" />
 
+На скриншоте показана приватная таблица маршрутов private-rt-k05 после изменения маршрута 0.0.0.0/0. Трафик из приватной подсети теперь направляется через NAT Gateway nat-gateway-k05, что позволяет EC2-инстансам выходитьь в Интернет для обновлений , при этом остоваясь недоступными извне.
 
+# Шаг 7. Создание Security Groups
 
 
 
